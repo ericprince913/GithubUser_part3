@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailActivity">
+
+
+    <ImageView
+        android:id="@+id/fotouser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@+id/namauser"
+        app:layout_constraintTop_toBottomOf="@+id/namauser"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/namauser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="324dp"
+        android:text="Name"
+        android:textSize="20sp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="15sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameuser"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="username"
+        android:textSize="15sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeMaxTextSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/fotouser"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="@+id/fotouser"
+        app:layout_constraintTop_toBottomOf="@+id/fotouser" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="83dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fotouser"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tampilfollower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:text="1000"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <TextView
+            android:id="@+id/tampilfollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="1000"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <TextView
+            android:id="@+id/repository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="310dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tempattinggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:text="Location"
+        android:textSize="15dp"
+        app:drawableStartCompat="@drawable/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/kantor"
+        app:layout_constraintTop_toBottomOf="@+id/kantor" />
+
+    <TextView
+        android:id="@+id/kantor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="Company"
+        android:textSize="15dp"
+        app:drawableStartCompat="@drawable/job"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/blueEric"
+        app:tabTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameuser" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout1" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="6dp"
+
+        android:background="@drawable/toogle_color_change"
+        android:text="ToggleButton"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
